@@ -1,5 +1,5 @@
        IDENTIFICATION          DIVISION.
-       PROGRAM-ID. 01-OLACOBOL.
+       PROGRAM-ID. OLACOBOL.
        PROCEDURE               DIVISION.
            DISPLAY "OLÁ, COBOL!".
            STOP RUN.

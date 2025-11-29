@@ -1,5 +1,5 @@
        IDENTIFICATION          DIVISION.
-       PROGRAM-ID. 01-CLIENTES.
+       PROGRAM-ID. CLIENTES.
       * COMENTARIO 
        ENVIRONMENT             DIVISION.
        DATA                    DIVISION.
