@@ -9,8 +9,8 @@
        DATA                        DIVISION.
        WORKING-STORAGE             SECTION.
        01  WRK-NOME                PICTURE X(20)      VALUE SPACES.
-       01  WRK-SALDO               PICTURE S9(05)     VALUE ZEROS.
-       01  WRK-SALDO-ED            PICTURE ZZZZ9      VALUE ZEROS.
+       01  WRK-SALDO               PICTURE S9(10)     VALUE ZEROS.
+       01  WRK-SALDO-ED            PICTURE Z.ZZZ.ZZZ.ZZZ9,99.      
               
        PROCEDURE                   DIVISION.
 
@@ -32,17 +32,20 @@
            DISPLAY "--------------------------------".
 
       *---------SUBTRAÇAO 
-           SUBTRACT 200 FROM WRK-SALDO.    
+           SUBTRACT 200 FROM WRK-SALDO.
+               MOVE WRK-SALDO TO WRK-SALDO-ED.    
            DISPLAY "SALDO " WRK-SALDO-ED.
            DISPLAY "--------------------------------".
 
       *---------MULTIPLICAÇAO
            MULTIPLY WRK-SALDO BY 2 GIVING WRK-SALDO.
+                MOVE WRK-SALDO TO WRK-SALDO-ED.
            DISPLAY "SALDO " WRK-SALDO-ED.
            DISPLAY "--------------------------------".
 
       *---------MULTIPLICAÇAO
            DIVIDE WRK-SALDO BY 3 GIVING WRK-SALDO.
+                MOVE WRK-SALDO TO WRK-SALDO-ED.
            DISPLAY "SALDO " WRK-SALDO-ED.
            DISPLAY "--------------------------------".
 
